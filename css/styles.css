@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+/* .hero-section {
+  background: url('hunza.jpg') center center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+} */
+ .hero-section {
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  animation: slideshow 15s infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slideshow {
+  0%   { background-image: url('../images/minaaar.jpg'); }
+  33%  { background-image: url('../images/karachi.jpg'); }
+  66%  { background-image: url('../images/hunza.jpg'); }
+  100% { background-image: url('../images/badshahi.jpg'); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h2,
+.hero-section p {
+  color: #fff;
+}
+
+/* Cards Section */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: white;
+  font-size: 0.9rem;
+}
+
+
+.about-hero {
+  background: url('../images/about_bg.jpg') center center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+}
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.about-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.nav-link.active {
+  font-weight: bold;
+  color: #0d6efd !important;
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
